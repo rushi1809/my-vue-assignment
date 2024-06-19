@@ -1,26 +1,58 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <h1>Vue.js API Integration</h1>
+    </header>
+    <main>
+      <ApiData />
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ApiData from './components/ApiData.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ApiData
   }
-}
+};
 </script>
 
 <style>
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+header {
+  background: #42b983;
+  padding: 20px;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .api-data {
+    padding: 10px;
+  }
+
+  input {
+    padding: 8px;
+  }
+
+  li {
+    padding: 8px;
+  }
 }
 </style>
